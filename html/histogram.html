@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="icon" href="../img/tutu.png">
+  <title>柱状特效(动画)</title>
+  <style>
+    /* page-wrepper */
+    .page-wrepper {
+      width: 60px;
+      height: 380px;
+      margin: 0 auto;
+    }
+    .we {
+      /* border-radius: 6%; */
+      background: linear-gradient(#ff9904 -8%, transparent 90%); /*颜色＋透明度*/
+      animation: tail 3s ease-in-out infinite , shooting 3s ease-in-out infinite;/*过渡时间*/
+    }
+    @keyframes tail {
+      0% {
+        height: 0;
+      }
+      100% {
+        height: 100%;
+      }
+    }
+    @keyframes  shooting {
+      0% {
+        -webkit-transform: translateY(600px); /* 前缀代表兼容性 */
+        transform: translateY(600px); /* 转化Y轴 */
+      }
+      100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page-wrepper">
+    <div class="we"></div>
+  </div>
+</body>
+</html>

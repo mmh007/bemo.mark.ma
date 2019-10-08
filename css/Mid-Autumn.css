@@ -1,0 +1,151 @@
+/* 外层样式 */
+.page-wrapper {
+  position: relative;
+  width: 636px;
+  height: 636px;
+  margin: 0 auto;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  background: rgba(250, 251, 255, 0.6);
+  border-radius: 100%;
+}
+.page-main-a {
+  position: relative;
+  width: 546px;
+  height: 546px;
+  margin: 0 auto;
+  top: 46px;
+  background: rgba(209, 219, 253, 0.1);
+  border-radius: 100%;
+  -webkit-animation: y 30s linear 0s infinite;
+  animation: y 30s linear 0s infinite;
+  z-index: 2;
+}
+/* 子菜单模块 */
+.page-main-a .submenu-card {
+  position: absolute;
+  text-align: center;
+  width: 80px;
+  height: 65px;
+  color: #454545;
+  padding-top: 20px;
+  background-color: #ffffff;
+  border-radius: 100%;
+  box-shadow: 10px 7px 32px rgba(203, 203, 207, 0.26);
+  -webkit-animation: w 30s linear 0s infinite;
+  animation: w 30s linear 0s infinite;
+}
+.page-main-a .submenu-card img {
+  width: 80px;
+  height: 80px;
+  margin-top: -17px;
+  border-radius: 100%;
+}
+.page-main-a .card-a {
+  top: -41px;
+  left: 210px;
+}
+.page-main-a .card-b {
+  top: 63px;
+  left: 19px;
+}
+.page-main-a .card-c {
+  top: 235px;
+  left: -39px;
+}
+.page-main-a .card-d {
+  top: 415px;
+  left: 37px;
+}
+.page-main-a .card-e {
+  top: 496px;
+  left: 254px;
+}
+.page-main-a .card-f {
+  top: 400px;
+  left: 443px;
+}
+.page-main-a .card-g {
+  top: 209px;
+  left: 503px;
+}
+.page-main-a .card-h {
+  top: 30px;
+  left: 418px;
+}
+
+.page-main-b {
+  position: absolute;
+  width: 363px;
+  height: 363px;
+  left: 50%;
+  top: 50%;
+  margin-left: -181.5px;
+  margin-top: -181.5px;
+  border: 1px dashed rgba(196, 196, 196, 0.6);
+  border-radius: 100%;
+}
+
+.page-main-c {
+  position: absolute;
+  width: 144px;
+  height: 107px;
+  top: 50%;
+  left: 50%;
+  font-size: 24px;
+  color: #fff;
+  padding-top: 37px;
+  margin-top: -72px;
+  margin-left: -72px;
+  text-align: center;
+  background: #ffb548;
+  border-radius: 100%;
+  animation: x 2s linear 0s infinite;
+}
+
+
+
+
+/* 动画 */
+
+@keyframes y {
+  0% {
+    -webkit-transform: translateX(0) translateY(0) translateZ(0) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scaleX(1) scaleY(1) scaleZ(1);
+    -moz-transform: translateX(0) translateY(0) translateZ(0) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scaleX(1) scaleY(1) scaleZ(1);
+    -ms-transform: translateX(0) translateY(0) translateZ(0) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scaleX(1) scaleY(1) scaleZ(1);
+    transform: translateX(0) translateY(0) translateZ(0) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scaleX(1) scaleY(1) scaleZ(1);
+  }
+  100% {
+    -webkit-transform: translateX(0) translateY(0) translateZ(0) rotateX(0deg) rotateY(0deg) rotateZ(-360deg) scaleX(1) scaleY(1) scaleZ(1);
+    -moz-transform: translateX(0) translateY(0) translateZ(0) rotateX(0deg) rotateY(0deg) rotateZ(-360deg) scaleX(1) scaleY(1) scaleZ(1);
+    -ms-transform: translateX(0) translateY(0) translateZ(0) rotateX(0deg) rotateY(0deg) rotateZ(-360deg) scaleX(1) scaleY(1) scaleZ(1);
+    transform: translateX(0) translateY(0) translateZ(0) rotateX(0deg) rotateY(0deg) rotateZ(-360deg) scaleX(1) scaleY(1) scaleZ(1);
+  }
+}
+@keyframes w {
+  0% {
+    -webkit-transform: translateX(0) translateY(0) translateZ(0) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scaleX(1) scaleY(1) scaleZ(1);
+    -moz-transform: translateX(0) translateY(0) translateZ(0) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scaleX(1) scaleY(1) scaleZ(1);
+    -ms-transform: translateX(0) translateY(0) translateZ(0) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scaleX(1) scaleY(1) scaleZ(1);
+    transform: translateX(0) translateY(0) translateZ(0) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scaleX(1) scaleY(1) scaleZ(1);
+  }
+  100% {
+    -webkit-transform: translateX(0) translateY(0) translateZ(0) rotateX(0deg) rotateY(0deg) rotateZ(360deg) scaleX(1) scaleY(1) scaleZ(1);
+    -moz-transform: translateX(0) translateY(0) translateZ(0) rotateX(0deg) rotateY(0deg) rotateZ(360deg) scaleX(1) scaleY(1) scaleZ(1);
+    -ms-transform: translateX(0) translateY(0) translateZ(0) rotateX(0deg) rotateY(0deg) rotateZ(360deg) scaleX(1) scaleY(1) scaleZ(1);
+    transform: translateX(0) translateY(0) translateZ(0) rotateX(0deg) rotateY(0deg) rotateZ(360deg) scaleX(1) scaleY(1) scaleZ(1);
+  }
+}
+
+@keyframes x {
+  0% {
+    opacity: 1;
+}
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+

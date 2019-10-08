@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="/assets/expand/images/icon.png" rel="icon">
+    <title>商务合作(修改成功的)</title>
+    <style>
+        html, body, div, span, applet, object, iframe,
+        h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+        a, abbr, acronym, address, big, cite, code,
+        del, dfn, em, img, ins, kbd, q, s, samp,
+        small, strike, strong, sub, sup, tt, var,
+        b, u, i, center,
+        dl, dt, dd, ol, ul, li,
+        fieldset, form, label, legend,
+        table, caption, tbody, tfoot, thead, tr, th, td,
+        article, aside, canvas, details, embed,
+        figure, figcaption, footer, header, hgroup,
+        menu, nav, output, ruby, section, summary,
+        time, mark, audio, video {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            /* font: inherit; */
+            /* vertical-align: baseline; */
+            text-decoration: none;
+            font-family: 'PingFangSC-Regular', 'PingFang SC', '微软雅黑', 'Helvetica Neue', 'Hiragino Sans GB', 'WenQuanYi Micro Hei', 'Microsoft Yahei', sans-serif, serif;
+            font-weight: 400;
+            color: #222222;
+        }
+
+        body {
+          /* min-height: 100vh; */
+          width: 100%;
+          height: 100%;
+          min-width: 1280px;
+          margin: 0 auto;
+          font-size: 14px;
+          background: #fff;
+          font-size: 'PingFang SC', '微软雅黑', 'Helvetica Neue', 'Hiragino Sans GB', 'WenQuanYi Micro Hei', 'Microsoft Yahei', sans-serif, serif !important;
+        }
+
+        /* HTML5 display-role reset for older browsers */
+        article, aside, details, figcaption, figure,
+        footer, header, hgroup, menu, nav, section {
+            display: block;
+        }
+
+        ol, ul, li {
+          list-style: none;
+        }
+
+        button, input, select {
+          border: 0px solid;
+          background-color: transparent;
+          outline: none;
+          appearance: none;
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          -ms-appearance: none;
+        }
+
+        blockquote, q {
+          quotes: none;
+        }
+
+        blockquote:before, blockquote:after,
+        q:before, q:after {
+          content: '';
+          content: none;
+        }
+
+        table {
+          border-collapse: collapse;
+          border-spacing: 0;
+        }
+
+      /* 全局样式 */
+
+      .wrapper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+      }
+
+      .wrapper .from-content {
+        width: 320px;
+        margin: 0 auto;
+        padding-top: 35px;
+      }
+      .interval-unify {
+        margin-bottom: 10px;
+      }
+      .interval-unify img{
+        float: left;
+        position: relative;
+        left: 290px;
+        top: -24px;
+        width: 12px;
+        height: 8px;
+      }
+      .from-content ul {
+        position: absolute;
+        width: 320px;
+        height: auto;
+        background: #fff;
+        border-radius: 6px;
+        margin-top: -10px;
+        box-shadow: 1px 1px 8px 1px rgb(216, 215, 215);
+        display: none;
+      }
+
+      .from-content ul li {
+        height: 30px;
+        padding-left: 15px;
+        line-height: 30px;
+        cursor: pointer;
+      }
+      ul .menu-list {
+        border-radius: 6px;
+        background: #FCFAFA;
+      }
+      ul .menu-lista {
+        border-radius: 6px;
+        background: #FCFAFA;
+      }
+      /* 提示文案 */
+      .annotation {
+        width: 320px;
+        height: 16px;
+        font-size: 12px;
+        color: #f01f1f;
+        margin-top: 2px;
+        margin-bottom: 8px;
+        display: inline-flex;
+      }
+      .annotation span {
+        position: relative;
+        top: 2px;
+        color: #f01f1f;
+      }
+      .verify-card {
+        width: 320px;
+        height: 16px;
+        color: #9B9B9B;
+      }
+      /* 下拉框层级关系 */
+      .select-card .organi-card {
+        z-index: 400;
+      }
+      .select-carda .organi-carda {
+        z-index: 300;
+      }
+      .wrapper .from-content input {
+        min-width: 320px;
+        width: 320px;
+        height: 44px;
+        text-indent: 14px;
+        border: 1px solid #E6E6E6;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+      .wrapper button {
+        width: 320px;
+        height: 44px;
+        font-size: 16px;
+        color: #FFFFFF;
+        line-height: 22px;
+        margin-top: 30px;
+        background: #F45959;
+        border-radius: 4px;
+        border: 1px solid #F45959;
+        cursor: pointer;
+      }
+      /* 遮罩层 */
+      .wrapper .mask-layer {
+        position: relative;
+        width: 250px;
+        height: 333px;
+        top: 87px;
+        margin: 0 auto;
+        background-color: #fff;
+        background:rgba(255,255,255,1);
+        border-radius: 10px;
+        z-index: 110;
+      }
+      .mask-layer h2 {
+        height: 48px;
+        font-size: 17px;
+        font-weight:500;
+        color: #333333;
+        line-height: 48px;
+        padding: 17px 82px 10px 82px;
+      }
+      .mask-layer p {
+        height: 16px;
+        font-size: 12px;
+        font-weight: 400;
+        color: #9B9B9B;
+        line-height:16px;
+        padding-bottom: 13px;
+        text-align: center;
+      }
+      .mask-layer .qrcode-card {
+        width: 140px;
+        height: 140px;
+        padding: 0px;
+        margin: 0 auto;
+      }
+      .mask-layer .qrcode-card img {
+        width: 140px;
+        height: 140px;
+      }
+      .mask-layer button {
+        width: 180px;
+        height: 44px;
+        font-size: 17px;
+        color: #fff;
+        background-color: #F45959;
+        line-height: 44px;
+        margin: 14px 35px;
+        user-select: none;
+      }
+      .mask-layer .delect img {
+        width: 32px;
+        height: 32px;
+        margin-top: 30px;
+        z-index: 100;
+        cursor: pointer;
+      }
+      /* 父级元素 */
+      .mask-weapper {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: none;
+        z-index: 100;
+      }
+      /* 子集元素 */
+      .mask-layer-weapper {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        opacity: 0.5;
+        background:rgba(0,0,0,1);
+        z-index: 100;
+      }
+     /* 清除input框尾部样式 */
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+      }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+      <!-- 弹出层 -->
+      <div class="mask-weapper">
+          <!-- 遮罩层 -->
+        <div class="mask-layer-weapper"></div>
+        <div class="mask-layer">
+          <h2>提交成功！</h2>
+          <p>如需其他咨询，请添加商务微信</p>
+          <p class="qrcode-card">
+            <img src="img/xuetang.png" alt="">
+          </p>
+          <a href="https://j.youzan.com/FoHnzi" target="_blank"><button>查看商城</button></a>
+          <p class="delect">
+            <img src="img/close-circle.png" alt="">
+          </p>
+        </div>
+      </div>
+      <form action="" class="from-content">
+        <input type="text" placeholder="品牌名称" id="brandName" name="brandName" class="interval-unify">
+        <div class="select-card">
+          <div class="interval-unify interval-card">
+            <input type="text" placeholder="品牌性质" id="brandType" name="brandType" class="brandType-card" readonly="readonly">
+            <p class="dd"><img src="img/down@2x.png" alt="down"></p>
+          </div>
+          <ul class="organi-card">
+            <li class="menu-list">学校</li>
+            <li>培训机构</li>
+            <li>在线课程</li>
+            <li>媒介公司</li>
+            <li>自媒体</li>
+            <li>其他</li>
+          </ul>
+        </div>
+        <div class="select-carda">
+          <div class="interval-unify interval-carda">
+            <input type="text" placeholder="合作需求" id="demand" name="demand" class="brandType-carda" readonly="readonly">
+              <p class="ff"><img src="img/down@2x.png" alt="down"></p>
+            </div>
+            <ul class="organi-carda ">
+              <li class="menu-lista">广告合作</li>
+              <li>课程合作</li>
+              <li>探校合作</li>
+              <li>讲座合作</li>
+              <li>内容转载</li>
+              <li>其他</li>
+            </ul>
+          </div>
+          <input type="text" placeholder="联系人" id="name" name="name" class="linkman">
+          <div class="annotation card-name">
+            <span>*</span>
+            <p class="verify-card">请填写联系人姓名，不可为空</p>
+          </div>
+          <input type="text" placeholder="联系人职务" name="duty" id="duty" class="interval-unify">
+          <input type="number" placeholder="手机号码" name="telephone" id="telephone">
+          <div class="annotation card-telephone">
+            <span>*</span>
+            <p class="verify-card">请填写联系方式的正确格式，不可为空</p>
+          </div>
+          <input type="text" placeholder="微信号" name="wechatCode" id="wechatCode" class="interval-unify">
+          <button type="button" class="btn" id="submit">申请提交</button>
+        </form>
+      </div>
+    <script src="http://libs.baidu.com/jquery/2.1.4/jquery.min.js"></script>
+    <!-- <script src="jquery-1.11.3.js"></script> -->
+    <script>
+      // 下拉框样式1
+      $('.organi-card li').mouseover(function () {
+        $('.organi-card li').removeClass('menu-list');
+        $(this).addClass('menu-list');
+      });
+      
+      $('.organi-card li').click(function () {
+    $('.organi-card').hide();
+    $('.brandType-card').val(($(this).text()));
+    $('.interval-unify p img').css('transform', 'rotate(360deg)');
+  });
+
+  // 点击空白处隐藏下拉框
+  $('.wrapper').bind("click",function(e){
+    var con = $(".select-card");// 设置目标区域
+      if(!con.is(e.target) && con.has(e.target).length === 0){ 
+        $(".organi-card").hide();
+    $('.interval-unify .dd img').css('transform', 'rotate(360deg)');
+    }
+  })
+
+
+  $('.from-content .select-card .interval-card').click(function () {
+    // 切换显示隐藏
+    var item = $(this).parent('.select-card').find('.organi-card')
+    var type = item.css('display')
+    item.toggle(type === 'none'); 
+    // 切换箭头
+    var num = type === 'none' ? '180' : '360'
+    $(this).find('img').css('transform', 'rotate('+num+'deg)');
+  })
+
+
+  // 下拉框样式2
+  $('.organi-carda li').mouseover(function () {
+    $('.organi-carda li').removeClass('menu-lista');
+    $(this).addClass('menu-lista');
+  });
+
+  $('.organi-carda li').click(function () {
+    $('.organi-carda').hide();
+    $('.brandType-carda').val(($(this).text()));
+    $('.interval-unify p img').css('transform', 'rotate(360deg)');
+  });
+
+  $('.from-content .select-carda .interval-carda').click(function () {
+    // 切换显示隐藏
+    var item = $(this).parent('.select-carda').find('.organi-carda')
+    var type = item.css('display')
+    item.toggle(type === 'none'); 
+    // 切换箭头
+    var num = type === 'none' ? '180' : '360'
+    $(this).find('img').css('transform', 'rotate('+num+'deg)')
+  })
+
+  // 点击空白处隐藏下拉框
+  $('.wrapper').bind("click",function(e){
+    var conq = $(".select-carda");// 设置目标区域
+      if(!conq.is(e.target) && conq.has(e.target).length === 0){ 
+        $(".organi-carda").hide();
+      $('.interval-unify .ff img').css('transform', 'rotate(360deg)');
+    }
+  })
+
+
+  // 删除按钮
+  $('.delect img').click(function () {
+    $('.mask-layer-weapper').hide();
+    $('.mask-layer').hide();
+  })
+
+    // 表单验证
+    // $('#companyName').blur(companyValue);
+    $('#name').blur(contactsValue);
+    $('#telephone').blur(telephoneValue);
+
+    // 联系人验证
+    function contactsValue() {
+        var $val = $('#name').val();
+        if ($val == '' || $val == null) {
+            $('.card-name').text('姓名不能为空!');
+            return false
+        } else {
+          $('.card-name').html('<span>*</span><p class="verify-card">校验成功</p>');
+            return true
+        }
+    };
+
+    // 电话验证
+    function telephoneValue() {
+        var $val = $('#telephone').val();
+        if ($val == '' || $val == null) {
+            $('.card-telephone').text('电话不能为空!');
+            return false
+        } else {
+            $('.card-telephone').html('<span>*</span><p class="verify-card">校验成功</p>');
+            return true
+        }
+    };
+    
+
+    // 提交按钮
+    $('#submit').on('click', function () {
+        // var $val = $('#companyName').val();
+        // if ($val === '' || $val == null) {
+        //     $('.verify-card').text('公司名称不能为空!');
+        //     return false
+        // }
+        var $val = $('#name').val();
+        if ($val === '' || $val == null) {
+            $('.card-name').text('姓名不能为空!');
+            return false
+        }
+        var $val = $('#telephone').val();
+        if ($val === '' || $val == null) {
+            $('.card-telephone').text('电话不能为空!');
+            return false
+        }
+        // 接口
+        $('.mask-layer-weapper').show();
+        $('.mask-layer').show();
+        $('form')[0].reset();
+        $.ajax({
+            url: "/m/business",
+            type: "POST",
+            contentType: "application/json",
+            data: JSON.stringify({
+                // "companyName": $("#companyName").val(),
+                "brandName": $("#brandName").val(),
+                "brandType": $("#brandType").val(),
+                "demand": $("#demand").val(),
+                "name": $("#name").val(),
+                "duty": $("#duty").val(),
+                "telephone": $("#telephone").val(),
+                "wechatCode": $("#wechatCode").val()
+            }),
+            dataType: "json",
+            success: function (result) {
+                if (result.success) {
+                  // $('.mask-layer-weapper').show();
+                // $('.mask-layer').show();
+                // $('form')[0].reset();
+                    location.reload();
+                } else {
+                    alert(result.message);
+                }
+            }
+        });
+    })
+
+</script>
+</body>
+</html>
